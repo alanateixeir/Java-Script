@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Informe a duração da viagem abaixo em: <br />
+    Dia(s): <input type="number" name="dia" id="dia"><br />
+    Hora(s): <input type="number" name="hora" id="hora"><br />
+    <button onclick="somarDH()">verificar</button>
+    <div id="divv"></div>
+
+    <script>
+
+        function somarDH() {
+            let dia = Number(document.getElementById('dia').value);
+            let hora = Number(document.getElementById('hora').value);
+            let dhora = dia * 24;
+            let soma = dhora + hora;
+            document.getElementById('divv').innerHTML = "A duração da viagem em horas é " + soma;
+        }
+    </script>
+
+
+</body>
+
+</html>

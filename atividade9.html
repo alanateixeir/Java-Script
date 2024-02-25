@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=x, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <b>Formas de pagamento:</b><br />
+    À vista e a prazo.
+
+    <p>Informe o valor do produto: <input type="number" name="valor" id="valor"></p>
+    <button onclick="pagamento()">Verifique</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function pagamento() {
+            let valor_produto = Number(document.getElementById('valor').value);
+            let vista = valor_produto - (valor_produto * 0.10);
+            let prazo = valor_produto / 3;
+            document.getElementById('resultado').innerHTML = "O valor à vista é " + vista + "<br /> A prazo são 3 parcelas de " + prazo;
+        }
+    </script>
+
+</body>
+
+</html>

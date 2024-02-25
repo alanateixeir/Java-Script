@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Valor jantar: <input type="number" name="val_janta" id="val_janta">
+    <button onclick="totalPago()">Total</button>
+
+    <p id="parag"></p>
+
+    <script>
+        function totalPago(){
+            let val_jantar = Number(document.getElementById('val_janta').value)
+            let garcon = val_jantar*0.10;
+            let total = garcon + val_jantar;
+            document.getElementById('parag').innerHTML = garcon + "<br />" + total;
+        }
+    </script>
+
+
+
+    
+</body>
+</html>

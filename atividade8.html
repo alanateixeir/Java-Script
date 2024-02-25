@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Informe o valor total do pedido: <input type="number" name="valor" id="valor"><br />
+    Em quantas pessoas será dividido o valor? <input type="number" name="pessoas" id="pessoas"><br />
+    <button onclick="calcularValor()">Calcular</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function calcularValor() {
+            let valort = Number(document.getElementById('valor').value);
+            let people = Number(document.getElementById('pessoas').value);
+            let total = valort / people;
+            document.getElementById('resultado').innerHTML = "O valor para cada pessoa é " + total;
+        }
+    </script>
+
+</body>
+
+</html>
